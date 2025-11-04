@@ -1,45 +1,47 @@
-# Avanceret Programmering Eksamen
+# MVC-based Reward System
 
-Et ASP.NET MVC projekt der implementerer et belønningssystem til salg ved hjælp af Strategy Pattern.
+Exam project demonstrating reward calculation for insurance sales using design patterns.
 
-## Beskrivelse
+## What it does
 
-Dette projekt demonstrerer brugen af design patterns, specielt Strategy Pattern, til at beregne belønninger baseret på forskellige kriterier som salgspris og kundetilfredshed.
+- Manage insurance sales records
+- Calculate customer rewards using different strategies
+- Store data in JSON files
+- Display sales and rewards in a web interface
 
-## Projekt Struktur
+## Reward Strategies
 
-- **Models/** - Datamodeller (Sale, RewardModel, etc.)
-- **Strategies/** - Implementeringer af forskellige belønningsstrategier
-  - `IRewardStrategy` - Interface for reward strategier
-  - `SalesPriceRewardStrategy` - Belønning baseret på salgspris
-  - `CustomerSatisfactionRewardStrategy` - Belønning baseret på kundetilfredshed
-  - `CombinedRewardStrategy` - Kombineret strategi
-  - `AdapterRewardStrategy` - Adapter pattern implementation
-- **Controllers/** - MVC controllers
-- **Views/** - Razor views
-- **TestProject/** - Unit tests
-- **TredjepartsProjekt/** - Tredjepartsintegration med adapter pattern
+The system can calculate rewards in 4 different ways:
+1. **Sales Price** - Based on the sale amount
+2. **Customer Satisfaction** - Based on satisfaction score
+3. **Combined** - Mix of both
+4. **Adapter** - Uses an external calculation method
 
-## Teknologier
+## Built with
 
 - ASP.NET Core MVC
-- C# .NET
-- JSON data persistence
+- C# / .NET 8
+- Razor views
+- JSON file storage (no database)
 
-## Kom i gang
+## Running the project
 
-1. Åbn `AvanceretProgrammeringEksamen.sln` i Visual Studio
-2. Build projektet
-3. Kør applikationen (F5)
+1. Open `AvanceretProgrammeringEksamen.sln` in Visual Studio
+2. Press F5 to run
+3. Navigate to the web interface
 
-## Kør tests
-
-Projektet inkluderer unit tests i `TestProject/` mappen.
+## Testing
 
 ```bash
 dotnet test
 ```
 
-## Data
+## Project Background
 
-Salgsdata gemmes i `fileSales.json`.
+This was my exam project for *Avanceret Programmering*, demonstrating:
+- Strategy Pattern
+- Adapter Pattern
+- MVC architecture
+- Object-oriented programming principles
+
+**Note:** This is the original version. See [insurancerewards.dk](https://github.com/DevAsgari/insurancerewards.dk) for the improved version with .NET Web API and Vue 3.
